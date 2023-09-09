@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        .medq{height:150px;
+            width:150px;
+        background-color: #d41010;
+        border:solid 2px black}
+        .medflex{border:2px dashed black;
+                display:flex;
+                justify-content:space-evenly;}
+        .medflex1{background-color: #ceec0b;
+                    height:150px;
+                    width:150px;}
+        .medflex2{background-color: #35d416;
+                    height:150px;
+                    width:150px;}
+        .medflex3{background-color: #0768e7;
+                    height:150px;
+                    width:150px;}
+        .medflex4{background-color: #b10dca;
+                    height:150px;
+                    width:150px;}
+
+        @media (max-width:500px){
+           .medq{background-color: #fff;} 
+        }
+        @media(max-width:640px){
+            .medflex{flex-direction:column;}
+        }
+        @media(min-width:640px){
+            .medflex{flex-direction:row;}
+        }
+
+        .flexm{display:flex;
+            flex-direction:row;}
+        .flexp1{height:180px; width:200px;
+                background-color: #3d2586a4;}
+        .flexp2{height:180px; width:200px;
+                background-color: yellow;}
+        img{float:right;}
+        @media(max-width:640px){
+            .flexm{flex-direction:column;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="medq">Hehehe</div>
+
+    <div class="medflex">
+        <div class="medflex1">Aaaa</div>
+        <div class="medflex2">Bbbb</div>
+        <div class="medflex3">Cccc</div>
+        <div class="medflex4">Dddd</div>
+    </div>
+
+    <div class="flexm">
+        
+        <div class="flexl">
+            <p class="flexp1">One</p>
+            <p class="flexp2">Two</p>
+        </div>
+
+        <div class="flexr">
+            <img src="image.jpg" alt="ghost" height="180px" width="200px">
+        </div>
+
+    </div>
+    
+</body>
+</html>
